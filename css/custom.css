@@ -1,0 +1,62 @@
+.residence .media .date {
+    background-color: #FF003C;   
+}
+.funding .media .date {
+    background-color: #FF8A00;   
+}
+.development .media .date {
+    background-color: #FABE28;   
+}
+.wellness .media .date {
+    background-color: #88C100;   
+}
+.cooperate .media .date {
+    background-color: #00C176;   
+}
+
+
+.legend {
+    padding-top: 20px;
+}
+.legend ul {
+    width: 100%;
+    list-style:none;
+    text-align:center;
+}
+.legend li {
+    display: inline-block;
+    padding: 0px 15px;
+}
+.legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+
+.responsible-list {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.student-list a {
+    color:#C21A01;
+}
+
+.x_title h2 {
+    overflow: visible;
+}
+.page-title .title_left {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .x_title h2 {
+        width: 100%;
+        font-size: 17px;
+    }
+}
