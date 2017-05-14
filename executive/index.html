@@ -12,8 +12,7 @@
 
   <!-- PNotify -->
   <link href="../vendors/pnotify/dist/pnotify.css" rel="stylesheet">
-  <link href="../vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
-  <link href="../vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+  <link href="../vendors/pnotify/dist/pnotify.mobile.css" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +48,7 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>ยินดีต้อนรับ,</span>
@@ -162,7 +161,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/img.jpg" alt="">ณัฐพล เจริญชัย
+                                    <img src="../images/img.jpg" alt="">ณัฐพล เจริญชัย
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -581,19 +580,8 @@
   <!-- Chart.js -->
   <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
 
-  <!-- gauge.js -->
-  <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-
   <!-- bootstrap-progressbar -->
   <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-
-  <!-- iCheck -->
-  <script src="../vendors/iCheck/icheck.min.js"></script>
-
-  <!-- Flot plugins -->
-  <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-  <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-  <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
 
   <!-- DateJS -->
   <script src="../vendors/DateJS/build/date.js"></script>
@@ -609,8 +597,7 @@
 
   <!-- PNotify -->
   <script src="../vendors/pnotify/dist/pnotify.js"></script>
-  <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
-  <script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+  <script src="../vendors/pnotify/dist/pnotify.mobile.js"></script>
 
   <!-- Custom Theme Scripts -->
   <script src="../build/js/custom.min.js"></script>
@@ -644,14 +631,53 @@
   <!-- PNotify -->
   <script>
     $(document).ready(function () {
+      var stack_topleft = {"dir1": "down", "dir2": "right"};
 
       new PNotify({
-        title: 'Sticky Success',
-        text: 'Sticky success... I\'m not even gonna make a joke.',
+        width: "600px",
+        title: 'พิธีถวายสักการะ และรับโอวาทจากอธิการบดี เนื่องในโอกาสเข้าร่วมการแข่งขันกีฬามหาวิทยาลัยแห่งประเทศไทย ครั้งที่ 44',
+        text: 'สถานที่: อาคารมหาจุฬาลงกรณ์  เวลา: 9.30',
         type: 'success',
+        addclass: "wellness",
+        stack: stack_topleft,
+        styling: 'bootstrap3',
         hide: false,
-        styling: 'bootstrap3'
+      })
+
+      new PNotify({
+        width: "600px",
+        title: 'พิธีถวายสักการะ และรับโอวาทจากอธิการบดี เนื่องในโอกาสเข้าร่วมการแข่งขันกีฬามหาวิทยาลัยแห่งประเทศไทย ครั้งที่ 44',
+        text: 'สถานที่: อาคารมหาจุฬาลงกรณ์  เวลา: 9.30',
+        type: 'success',
+        addclass: "scholarship",
+        hide: false,
+        stack: stack_topleft,
+        styling: 'bootstrap3',
       });
+
+
+      new PNotify({
+        width: "600px",
+        title: 'พิธีถวายสักการะ และรับโอวาทจากอธิการบดี เนื่องในโอกาสเข้าร่วมการแข่งขันกีฬามหาวิทยาลัยแห่งประเทศไทย ครั้งที่ 44',
+        text: 'สถานที่: อาคารมหาจุฬาลงกรณ์  เวลา: 9.30',
+        type: 'success',
+        addclass: "development",
+        stack: stack_topleft,
+        styling: 'bootstrap3',
+        hide: false,
+      })
+
+
+      new PNotify({
+        width: "600px",
+        title: 'พิธีถวายสักการะ และรับโอวาทจากอธิการบดี เนื่องในโอกาสเข้าร่วมการแข่งขันกีฬามหาวิทยาลัยแห่งประเทศไทย ครั้งที่ 44',
+        text: 'สถานที่: อาคารมหาจุฬาลงกรณ์  เวลา: 9.30',
+        type: 'success',
+        addclass: "residence",
+        stack: stack_topleft,
+        styling: 'bootstrap3',
+        hide: false,
+      })
 
     });
   </script>

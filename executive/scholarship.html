@@ -48,7 +48,7 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>ยินดีต้อนรับ,</span>
@@ -161,7 +161,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/img.jpg" alt="">ณัฐพล เจริญชัย
+                                    <img src="../images/img.jpg" alt="">ณัฐพล เจริญชัย
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -180,13 +180,56 @@
 
         <div class="page-title">
           <div class="title_left">
-            <h3>รายงานภาพรวมฝ่ายทุนการศึกษาและบริการนิสิต</h3>
+            <h3>รายงานภาพรวมฝ่ายทุนการศึกษาและบริการนิสิต ประจำปีการศึกษา 2559</h3>
           </div>
+          
+        <div class="clearfix"></div>
+
+          <div class="row tile_count">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-area-chart" aria-hidden="true"></i> จำนวนทุนทั้งหมด (ทุน)</span>
+              <div class="count">7500</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-area-chart" aria-hidden="true"></i> จำนวนทุนทั้งหมด (บาท)</span>
+              <div class="count">2500000</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-male" aria-hidden="true"></i> จำนวนนิสิตกู้กยศ</span>
+              <div class="count">500</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-area-chart" aria-hidden="true"></i> จำนวนนิสิตที่เข้ามาใช้บริการอื่นๆ</span>
+              <div class="count">250</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-female"  aria-hidden="true"></i> ระดับความพึงพอใจ</span>
+              <div class="count">4.78/5.0</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-male" aria-hidden="true"></i> โครงการภายใต้การดูแล</span>
+              <div class="count">20</div>
+            </div>
+          </div>
+
         </div>
 
         <div class="clearfix"></div>
 
         <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel tile">
+              <div class="x_title">
+                <h2>จำนวนทุนที่นิสิตได้รับ จำแนกตามคณะ</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <canvas id="schorlar_bar" height="400px"></canvas>
+                <div id="schorlar_bar_legend" class="legend"></div>
+              </div>
+            </div>
+          </div>
 
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="x_panel tile">
@@ -204,7 +247,7 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="x_panel tile">
               <div class="x_title">
-                <h2>งบประมาณสำหรับกิจกรรมนิสิตจำแนกตามสถานะโครงการ</h2>
+                <h2>งบประมาณทุนการศึกษา (ล้านบาท)</h2>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
@@ -214,7 +257,31 @@
             </div>
           </div>
 
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="x_panel tile">
+              <div class="x_title">
+                <h2>จำนวนนิสิตกู้กยศ แยกตามคณะ</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <canvas id="kys_bar" height="730px"></canvas>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-md-6 col-sm-4 col-xs-12">
+            <div class="x_panel tile">
+              <div class="x_title">
+                <h2>จำนวนนิสิตได้รับทุนจำแนกตามภูมิลำเนา</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+
+                <div id="thai_vmap" style="height:750px;"></div>
+
+              </div>
+            </div>
+          </div>
 
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="x_panel funding">
@@ -277,7 +344,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-sm-12 col-xs-12">
+          <!--<div class="col-md-6 col-sm-12 col-xs-12">
             <div class="x_panel tile">
               <div class="x_title">
                 <h2>รายชื่อนิสิตผู้รับทุน</h2>
@@ -404,7 +471,9 @@
 
               </div>
             </div>
-          </div>
+          </div>-->
+
+
         </div>
 
 
@@ -465,8 +534,32 @@
   <!-- Custom Theme Scripts -->
   <script src="../build/js/custom.min.js"></script>
 
+  <!-- JQVMap -->
+  <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+  <script src="../vendors/jqvmap/dist/maps/jquery.vmap.thai.js"></script>
+  <script src="../vendors/jqvmap/dist/data/thai.sampledata.js"></script>
 
+  <!-- JQVMap -->
 
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery('#thai_vmap').vectorMap({
+        map: 'thai_en',
+        backgroundColor: '#null',
+        color: '#ffffff',
+        hoverOpacity: 0.7,
+        selectedColor: '#999999',
+        enableZoom: true,
+        values: thai_sample_data,
+        showTooltip: true,
+        scaleColors: ['#FFFFFF', '#ff6600'],
+        normalizeFunction: 'polynomial',
+        onLabelShow: function (event, label, code) {
+          label.append(': ' + thai_sample_data[code] + ' คน');
+        }
+      });
+    });
+  </script>
 
   <!-- bootstrap-daterangepicker -->
   <script>
@@ -544,6 +637,8 @@
 
   <script type="text/javascript">
     var options = {
+      responsive: true,
+      maintainAspectRatio: false,
       legend: false,
       events: false,
       animation: {
@@ -555,7 +650,7 @@
 
           ctx.font = '15px tahoma';
           ctx.textAlign = "center";
-          ctx.fillStyle = "#ffffff";
+          ctx.fillStyle = "#000";
 
           Chart.helpers.each(self.data.datasets.forEach((dataset, datasetIndex) => {
             var meta = self.getDatasetMeta(datasetIndex),
@@ -591,7 +686,7 @@
                 dx = centerx + lradius * Math.cos(langle),
                 dy = centery + lradius * Math.sin(langle),
                 //val = Math.round(dataset.data[idx] / total * 100);
-                val = dataset.data[idx] + " ล้านบาท";
+                val = dataset.data[idx] + "";
               ctx.fillText(val, dx, dy);
             }
 
@@ -600,33 +695,9 @@
       },
     };
 
-    // Pie chart
-    var ctx = document.getElementById("program_pie");
-    var data = {
-      datasets: [{
-        data: [4, 15, 10],
-        backgroundColor: [
-          "#ffb380",
-          "#ff6600",
-          "#ff3300"
-        ]
-      }],
-      labels: [
-        "กำลังพิจารณา",
-        "กำลังดำเนืนการ",
-        "ดำเนินการแล้วเสร็จ"
-      ]
-    };
-
-    var pieChart = new Chart(ctx, {
-      data: data,
-      type: 'pie',
-      options: options
-    });
-
-    document.getElementById("programLegend").innerHTML = pieChart.generateLegend();
-
     var opt = {
+      responsive: true,
+      maintainAspectRatio: false,
       legend: false,
       events: false,
       tooltips: {
@@ -662,16 +733,141 @@
       }
     };
 
+
     var bar_data = {
-      labels: ["ทุนประเภท ก", "ทุนประเภท ข (1)", "ทุนประเภท ข (2)", "ทุนประเภท ค"],
+      labels: ["คณะครุศาสตร์", "คณะนิติศาสตร์", "คณะนิเทศศาสตร์", "คณะพาณิชยศาสตร์และการบัญชี", "คณะรัฐศาสตร์", "คณะเศรษฐศาสตร์", "คณะอักษรศาสตร์", "คณะวิทยาศาสตร์", "คณะวิศวกรรมศาสตร์", "คณะสถาปัตยกรรมศาสตร์", "สำนักวิชาทรัพยากรการเกษตร", "คณะจิตวิทยา", "คณะทันตแพทยศาสตร์", "คณะพยาบาลศาสตร์", "คณะแพทยศาสตร์", "คณะเภสัชศาสตร์", "คณะสหเวชศาสตร์", "คณะวิทยาศาสตร์การกีฬา", "คณะสัตวแพทยศาสตร์"],
+      datasets: [{
+        label: "ทุนประเภท ก",
+        backgroundColor: "#ff6600",
+        data: [51, 30, 40, 28, 92, 50, 45, 28, 30, 45, 40, 28, 51, 30, 40, 28, 92, 50, 45]
+      },
+        // {
+        //   label: "ทุนประเภท ข (1)",
+        //   backgroundColor: "#ffa366",
+        //   data: [30, 87, 45, 40, 28, 40, 50, 45, 51, 40, 30, 28, 28, 60, 50, 45, 51, 30, 28]
+        // }, {
+        //   label: "ทุนประเภท ข (2)",
+        //   backgroundColor: "#ff6600",
+        //   data: [51, 50, 40, 28, 92, 40, 28, 92, 51, 30, 30, 40, 28, 45, 28, 30, 45, 50, 45]
+        // }, {
+        //   label: "ทุนประเภท ค",
+        //   backgroundColor: "#ff471a",
+        //   data: [51, 30, 40, 28, 92, 40, 28, 28, 30, 45, 40, 50, 45, 92, 50, 28, 51, 30, 45]
+        // }, {
+        //   label: "ทุนอื่นๆ",
+        //   backgroundColor: "#e62e00",
+        //   data: [51, 28, 92, 50, 45, 40, 28, 51, 30, 40, 28, 92, 50, 45, 30, 40, 28, 30, 45]
+        // }
+      ]
+    };
+
+    // Bar chart
+    var ctx = document.getElementById("schorlar_bar");
+    var mybarChart = new Chart(ctx, {
+      type: 'bar',
+      data: bar_data,
+      options: opt
+    });
+
+    var horizon_opt = {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: false,
+        events: false,
+        tooltips: {
+          enabled: false
+        },
+        hover: {
+          animationDuration: 0
+        },
+        animation: {
+          duration: 500,
+          easing: "easeOutQuart",
+          onComplete: function () {
+            var ctx = this.chart.ctx;
+            ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+
+            this.data.datasets.forEach(function (dataset) {
+              for (var i = 0; i < dataset.data.length; i++) {
+                var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+                  scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
+                ctx.fillStyle = '#000';
+                var y_pos = model.y - 2;
+                var x_pos = model.x + 20
+                // Make sure data value does not get overflown and hidden
+                // when the bar's value is too close to max value of scale
+                // Note: The y value is reverse, it counts from top down
+
+                ctx.fillText(dataset.data[i], x_pos, y_pos);
+              }
+            });
+          }
+        }
+      };
+
+    var kys_data = {
+      labels: ["คณะครุศาสตร์", "คณะนิติศาสตร์", "คณะนิเทศศาสตร์", "คณะพาณิชยศาสตร์และการบัญชี", "คณะรัฐศาสตร์", "คณะเศรษฐศาสตร์", "คณะอักษรศาสตร์", "คณะวิทยาศาสตร์", "คณะวิศวกรรมศาสตร์", "คณะสถาปัตยกรรมศาสตร์", "สำนักวิชาทรัพยากรการเกษตร", "คณะจิตวิทยา", "คณะทันตแพทยศาสตร์", "คณะพยาบาลศาสตร์", "คณะแพทยศาสตร์", "คณะเภสัชศาสตร์", "คณะสหเวชศาสตร์", "คณะวิทยาศาสตร์การกีฬา", "คณะสัตวแพทยศาสตร์"],
+      datasets: [{
+        label: "นิสิตกู้ กยศ",
+        backgroundColor: "#ff6600",
+        data: [51, 30, 30, 45, 40, 28, 51, 50, 45, 28, 28, 92, 30, 40, 40, 28, 92, 50, 45]
+      }]
+    };
+
+    // Bar chart
+    var ctx = document.getElementById("kys_bar");
+    var mybarChart = new Chart(ctx, {
+      type: 'horizontalBar',
+      data: kys_data,
+      options: horizon_opt
+    });
+
+
+    ///document.getElementById("schorlar_bar_legend").innerHTML = mybarChart.generateLegend();
+
+    // Pie chart
+    var ctx = document.getElementById("program_pie");
+    var data = {
+      datasets: [{
+        data: [4, 15, 10, 4,5 ],
+        backgroundColor: [
+          "#ffd1b3",
+          "#ff6600",
+          "#ff471a",
+          "#cc2900",
+          "#e60000"
+        ]
+      }],
+      labels: [
+        "ทุนประเภท ก",
+        "ทุนประเภท ข(1)",
+        "ทุนประเภท ข(2)",
+        "ทุนประเภท ค",
+        "ทุนอื่นๆ"
+      ]
+    };
+
+    var pieChart = new Chart(ctx, {
+      data: data,
+      type: 'pie',
+      options: options
+    });
+
+    document.getElementById("programLegend").innerHTML = pieChart.generateLegend();
+
+
+    var bar_data = {
+      labels: ["ทุนประเภท ก", "ทุนประเภท ข (1)", "ทุนประเภท ข (2)", "ทุนประเภท ค", "ทุนอื่นๆ"],
       datasets: [{
         label: "จำนวนผู้สมัครรับทุน",
         backgroundColor: "#F7803C",
-        data: [95, 150, 140, 145]
+        data: [95, 150, 140, 145, 250]
       }, {
         label: "จำนวนนิสิตที่ได้รับทุน",
         backgroundColor: "#FF3D00",
-        data: [84, 97, 107, 117]
+        data: [84, 97, 107, 117, 142]
       }]
     };
 
