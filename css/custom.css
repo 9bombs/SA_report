@@ -49,12 +49,12 @@
     overflow: visible;
 }
 .page-title .title_left {
-    width: 55%;
+    width: 60%;
     float: left;
     display: block;
 }
 .page-title .title_right {
-    width: 45%;
+    width: 40%;
     float: left;
     display: block;
 }
@@ -67,10 +67,6 @@
 }
 
 
-ul.messages li .message_date {
-    float: left;
-    text-align: right;
-}
 
 .x_title h2 {
   overflow: visible;
@@ -98,4 +94,11 @@ ul.messages li .message_date {
 }
 .ui-pnotify.cooperate .alert{
   background-color: #00C176;
+}
+
+
+
+ul.messages li .message_date {
+    float: left;
+    text-align: right;
 }

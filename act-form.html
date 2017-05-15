@@ -10,31 +10,26 @@
 
     <title>ระบบบริหารงานสำนักบริหารกิจการนิสิต จุฬาลงกรณ์มหาวิทยาลัย</title>
 
-    <!-- PNotify -->
-    <link href="vendors/pnotify/dist/pnotify.css" rel="stylesheet">
-    <link href="vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
-    <link href="vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
-
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Select2 -->
     <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- JQVMap -->
     <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
@@ -66,7 +61,8 @@
 
                     <br />
 
-                             <!-- sidebar menu -->
+
+          <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
               <h3>เมนูหลัก</h3>
@@ -109,10 +105,19 @@
                       <a href="scholarship.html">รายงานภาพรวม</a>
                     </li>
                     <li>
-                      <a href="scholarship-form.html">นำเข้าข้อมูล</a>
+                      <a href="scholarship-data.html">รายชื่อนิสิตทุน</a>
+                    </li>
+                    <li>
+                      <a href="scholarship-new-form.html">เพิ่มนิสิตทุนใหม่</a>
+                    </li>
+                    <li>
+                      <a href="scholarship-new-funding.html">เพิ่มทุนภายนอกใหม่</a>
                     </li>
                     <li>
                       <a href="act-form.html">สร้างกิจกรรมใหม่</a>
+                    </li>
+                    <li>
+                      <a href="scholarship-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
                     </li>
                   </ul>
                 </li>
@@ -124,10 +129,10 @@
                       <a href="residence.html">รายงานภาพรวม</a>
                     </li>
                     <li>
-                      <a href="residence-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
+                      <a href="act-form.html">สร้างกิจกรรมใหม่</a>
                     </li>
                     <li>
-                      <a href="act-form.html">สร้างกิจกรรมใหม่</a>
+                      <a href="residence-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
                     </li>
                   </ul>
                 </li>
@@ -211,7 +216,6 @@
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>เพิ่มกิจกรรมใหม่</h3>
                     </div>
 
                     <div class="title_right">
@@ -232,7 +236,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>รายละเอียดกิจกรรม </h2>
+                                <h2>เพิ่มโครงการใหม่ </h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -253,6 +257,8 @@
                             <div class="x_content">
                                 <br>
                                 <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                                    
+                                    <h3>ข้อมูลโครงการ</h3>
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">ชื่อกิจกรรม <span class="required">*</span></label>
@@ -278,6 +284,17 @@
                                                     <div id="gender" class="btn-group" data-toggle="buttons">
                                                         <label class="btn btn-default active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default"><input type="radio" name="gender" value="male" data-parsley-multiple="gender" data-parsley-id="12"> &nbsp; แสดง &nbsp;</label>
                                                         <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default"><input type="radio" name="gender" value="female" data-parsley-multiple="gender"> ไม่แสดง</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                          <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">แสดงเฉพาะในฝ่ายเท่านั้น </label>
+                                            <div class="">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div id="gender" class="btn-group" data-toggle="buttons">
+                                                        <label class="btn btn-default active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default"><input type="radio" name="gender" value="male" data-parsley-multiple="gender" data-parsley-id="12"> &nbsp; ใช่ &nbsp;</label>
+                                                        <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default"><input type="radio" name="gender" value="female" data-parsley-multiple="gender"> ไม่ใช่</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,6 +405,43 @@
 
 
                                     <div class="ln_solid"></div>
+
+                                    <h3>งบประมาณตามหลักการ</h3>
+
+                                      
+  <div id="education_fields">
+          
+        </div>
+
+<div class="col-sm-3 col-sm-offset-3 nopadding">
+  <div class="form-group">
+    <input type="text" class="form-control" id="Degree" name="Degree[]" value="" placeholder="จำนวนเงิน">
+  </div>
+</div>
+
+<div class="col-sm-3 nopadding">
+  <div class="form-group">
+    <div class="input-group">
+      <select class="form-control" id="educationDate" name="educationDate[]">
+      
+        <option value="">ประเภทงบประมาณ</option>
+        <option value="1">ค่าเดินทาง</option>
+        <option value="2">ค่าอาหารและสวัสดิการ</option>
+        <option value="3">ค่าสถานที่</option>
+        <option value="4">ค่าตอบแทนวิทยากร</option>
+        <option value="5">ค่าจ้างเหมาบริการอื่นๆ</option>
+        <option value="6">ค่าล่วงเวลา</option>
+        <option value="7">อื่นๆ</option>
+      </select>
+      <div class="input-group-btn">
+        <button class="btn btn-success" type="button"  onclick="education_fields();"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
                                     <div class="form-group">
                                         <div class="col-xs-12 text-center">
                                             <button type="submit" class="btn btn-primary">Cancel</button>
@@ -470,12 +524,23 @@
                     format: 'MM/DD/YYYY h:mm A'
                 }
             });
-
         });
 
+        var room = 1;
+        function education_fields() {
 
+            room++;
+            var objTo = document.getElementById('education_fields')
+            var divtest = document.createElement("div");
+            divtest.setAttribute("class", "form-group removeclass" + room);
+            var rdiv = 'removeclass' + room;
+            divtest.innerHTML = '<div class="col-sm-3 col-sm-offset-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Degree" name="Degree[]" value="" placeholder="จำนวนเงิน"></div></div><div class="col-sm-3 nopadding"><div class="form-group"><div class="input-group"> <select class="form-control" id="educationDate" name="educationDate[]"><option value="">ประเภทงบประมาณ</option><option value="1">ค่าเดินทาง</option><option value="2">ค่าอาหารและสวัสดิการ</option><option value="3">ค่าสถานที่</option><option value="4">ค่าตอบแทนวิทยากร</option><option value="5">ค่าจ้างเหมาบริการอื่นๆ</option><option value="6">ค่าล่วงเวลา</option><option value="7">อื่นๆ</option></select><div class="input-group-btn"> <button class="btn btn-danger" type="button" onclick="remove_education_fields(' + room + ');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div></div><div class="clear"></div>';
 
-
+            objTo.appendChild(divtest)
+        }
+        function remove_education_fields(rid) {
+            $('.removeclass' + rid).remove();
+        }
 
 
         //     var cb = function (start, end, label) {

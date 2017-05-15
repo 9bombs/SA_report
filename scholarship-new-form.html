@@ -2,62 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ระบบบริหารงานสำนักบริหารกิจการนิสิต จุฬาลงกรณ์มหาวิทยาลัย</title>
+  <title>ระบบบริหารงานสำนักบริหารกิจการนิสิต จุฬาลงกรณ์มหาวิทยาลัย</title>
 
-    <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
-    <!-- bootstrap-daterangepicker -->
-    <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
-    <!-- Datatables -->
-    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+  <!-- Datatables -->
+  <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+  <!-- Custom Theme Style -->
+  <link href="build/css/custom.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
-    <div class="container body">
-        <div class="main_container">
-            <div class="col-md-3 left_col">
-                <div class="left_col scroll-view">
-                    <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><span>Executive Report</span></a>
-                    </div>
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><span>Executive Report</span></a>
+          </div>
 
-                    <div class="clearfix"></div>
+          <div class="clearfix"></div>
 
-                    <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_pic">
-                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                        </div>
-                        <div class="profile_info">
-                            <span>ยินดีต้อนรับ,</span>
-                            <h2>ณัฐพล เจริญชัย</h2>
-                        </div>
-                    </div>
-                    <!-- /menu profile quick info -->
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>ยินดีต้อนรับ,</span>
+              <h2>ณัฐพล เจริญชัย</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
 
-                    <br />
+          <br />
 
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -248,11 +248,35 @@
                                 <br>
                                 <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CN</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" value="ช04144" disabled>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">ประเภททุน</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <select class="form-control">
+                                                <option> ทุนอุดหนุนการศึกษา</option>
+                                                <option> ทุนรางวัลเรียนดี</option>
+                                                <option> ทุนสร้างชื่อเสียงและทำคุณประโยชน์</option>
+                                            </select>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">ประเภทย่อย</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <select class="form-control">
+                                                <option> ทุนประเภท ก</option>
+                                                <option> ทุนประเภท ข (1)</option>
+                                                <option> ทุนประเภท ข (2)</option>
+                                                <option> ทุนประเภท ค</option>
+                                                <option> เงินทุนภูมิพลสำหรับนิสิตเรียนดีเยี่ยมและเรียนดี</option>
+                                                <option> เงินทุนภูมิพลสำหรับนิสิตเรียนดีแต่ขาดแคลน</option>
+                                                <option> ทุนอื่นๆ</option>
+                                                <option> ด้านการบริหาร</option>
+                                                <option> ด้านวิชาการ</option>
+                                                <option> ด้านศิลปวัฒนธรรม</option>
+                                                <option> ฝ่ายพัฒนาสังคมและบำเพ็ญประโยชน์</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">รหัสนิสิต</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -344,11 +368,27 @@
                                         </div>
                                     </div>
 
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">อีเมล</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">หมายเลขโทรศัพท์</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-xs-12 text-center">
                                             <button type="submit" class="btn btn-primary">ยกเลิก</button>
-                                            <button type="submit" class="btn btn-success">เพิ่มผู้ใช้บริการ</button>
+                                            <button type="submit" class="btn btn-success">เพิ่มนิสิตรับทุนใหม่</button>
                                         </div>
                                     </div>
 

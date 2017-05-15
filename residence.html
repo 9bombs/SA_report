@@ -30,7 +30,7 @@
   <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom Theme Style -->
-  <link href="build/css/custom.css" rel="stylesheet">
+  <link href="build/css/custom.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
 </head>
 
@@ -102,10 +102,19 @@
                       <a href="scholarship.html">รายงานภาพรวม</a>
                     </li>
                     <li>
-                      <a href="scholarship-form.html">นำเข้าข้อมูล</a>
+                      <a href="scholarship-data.html">รายชื่อนิสิตทุน</a>
+                    </li>
+                    <li>
+                      <a href="scholarship-new-form.html">เพิ่มนิสิตทุนใหม่</a>
+                    </li>
+                    <li>
+                      <a href="scholarship-new-funding.html">เพิ่มทุนภายนอกใหม่</a>
                     </li>
                     <li>
                       <a href="act-form.html">สร้างกิจกรรมใหม่</a>
+                    </li>
+                    <li>
+                      <a href="scholarship-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
                     </li>
                   </ul>
                 </li>
@@ -117,10 +126,10 @@
                       <a href="residence.html">รายงานภาพรวม</a>
                     </li>
                     <li>
-                      <a href="residence-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
+                      <a href="act-form.html">สร้างกิจกรรมใหม่</a>
                     </li>
                     <li>
-                      <a href="act-form.html">สร้างกิจกรรมใหม่</a>
+                      <a href="residence-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
                     </li>
                   </ul>
                 </li>
@@ -271,7 +280,7 @@
               </div>
               <div class="x_content">
 
-                <div id="thai_vmap" style="height:750px;"></div>
+                <div id="thai_vmap" style="height:720px;"></div>
 
               </div>
             </div>
@@ -291,20 +300,23 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-sm-6 col-xs-12">
+
+          <div class="col-md-6 col-sm-4 col-xs-12">
             <div class="x_panel tile">
               <div class="x_title">
-                <h2>จำนวนเตียงภายในหอพักนิสิต จำแนกตามสถานะและเพศ</h2>
+                <h2>ปัญหาที่ได้รับการร้องเรียนสูงสุด</h2>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <canvas id="bed_pie" height="300px"></canvas>
-                <div id="bed_pie_legend" class="legend"></div>
+                <canvas id="top_problem" height="250"></canvas>
+                <!--<div id="topproblem_legend" class="legend"></div>-->
               </div>
             </div>
           </div>
 
-          
+        </div>
+        <div class="row">
+
           <div class="col-xs-6">
             <div class="x_panel wellness">
               <div class="x_title col-xs-12">
@@ -312,13 +324,11 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <canvas id="mood_line" height="250px"></canvas>
-                <div id="mood_line_legend" class="legend"></div>
+                <canvas id="mood_line" height="250"></canvas>
+                <!--<div id="mood_line_legend" class="legend"></div>-->
               </div>
             </div>
           </div>
-
-
 
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="x_panel residence">
@@ -377,6 +387,51 @@
                     <p>ณ.สนามหน้าพระบรมราชานุสาวรีย์</p>
                   </div>
                 </article>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel tile">
+              <div class="x_title">
+                <h2>ปัญหาอื่นๆที่พบ</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <ul>
+                  <li>
+                    <h3>สตาร์ท แครอทอิออนโฮปโอเพ่น</h3>
+                    อีสเตอร์คีตกวีฮองเฮาอัตลักษณ์ เพียวช็อตโดมิโนลาตินโกะ นอมินีโซนี่ นายพรานโดนัทโดนัท เลกเชอร์ออเดอร์คันยิ โบว์กระดี๊กระด๊า
+                    คลาสสิกโค้ช รีพอร์ทการันตีสัมนาไบโอ ดั๊มพ์ป๊อก ฟลุต คอร์รัปชั่น เมคอัพรายชื่อเบิร์ดโชห่วย สต๊อคเดโมสารขัณฑ์ฮาร์ดเมคอัพ
+                    แพลนไฮกุ </li>
+
+                  <li>
+                    <h3>เรตเจไดพรีเซ็นเตอร์ ฟลุค อพาร์ตเมนท์บุญคุณพาสตา </h3>
+                    ลีเมอร์หมั่นโถวเกมส์ สเตเดียมธัมโมเซาท์ เซี้ยวโกเต็กซ์ซิตี้บอยคอตคาสิโน อพาร์ทเมนท์สงบสุขลอจิสติกส์บลูเบอร์รี่ก๋ากั่น โปรเจคท์แพตเทิร์นเด้อ
+                    สต็อคยิวแอนด์คาแร็คเตอร์ อุปการคุณเยอร์บีรา เบิร์ดซัพพลายเออร์ไมเกรน เยอร์บีร่า เมจิคแลนด์ โปรเจกเตอร์มั้ยแจ๊กพ็อตคอนเทนเนอร์คีตราชัน
+                    ทำงานแพนดาม้านั่งดีเจ รุสโซ </li>
+
+                  <li>
+                    <h3>ซาดิสต์ฮิตเกมส์วอล์ค ฮอตโค้ช</h3>
+                    อุปการคุณ นพมาศธรรมาภิบาลหมั่นโถว ออยล์ก่อนหน้าพาร์ตเนอร์เรตฟาสต์ฟู้ด บอมบ์วีซ่าโต๊ะจีน นายพราน พาสตาเซอร์ไลท์เด้อ ดัมพ์
+                    เซลส์แมนแพทเทิร์นพีเรียดซิตีอพาร์ทเมนต์ มาม่าแทกติคมลภาวะหล่อฮังก้วยโง่เขลา ซัมเมอร์ผู้นำจิ๊กซอว์สไปเดอร์
+                    บ๊อกซ์จูเนียร์โมเต็ลสัมนา โค้ก แพตเทิร์น มยุราภิรมย์ติงต๊องแอนด์ </li>
+
+                  <li>
+                    <h3>แอนด์เคอร์ฟิว ปิยมิตรเดบิต อมาตยาธิปไตยไวกิ้งชาร์ตอิสรชน</h3> แผดเผาภคันทลาพาธเลดี้ยอมรับ สเปก ติวเตอร์ดีลเลอร์จังโก้สโรชา
+                    โปสเตอร์อัลบั้มมัฟฟิน แฟ็กซ์แอ็กชั่นโรลออน ช็อคซานตาคลอสหยวนเปโซช็อค สโตน กับดักมะกัน แทงกั๊กอินเตอร์
+                    ทริปเจได ฮาโลวีนออโต้ศิลปากรมอลล์ เดโม วอลนัตมอลล์เอเซียฮวงจุ้ย </li>
+
+                  <li>
+                    <h3>สลัม มินท์ สเต็ปโคโยตี อึ้มบ๊อบตัวเองยังไงโปรเจ็ค</h3> แกงค์ฮ็อตด็อกมหาอุปราชา กลาสสไลด์วานิลลา เอนทรานซ์พาสต้า
+                    บู๊เปเปอร์แยมโรล ปัจเจกชนไฮกุโมเต็ลพาสปอร์ตวีซ่า เลคเชอร์ออร์แกนิกลาเต้สามช่า พุดดิ้งฮ็อตด็อก ละอ่อนโซนี่แอปเปิลคอนโดมิเนียม
+                    เหี่ยวย่นแมชชีนพูล ไอซียู เสือโคร่งคำตอบ กัมมันตะ </li>
+
+                </ul>
               </div>
             </div>
           </div>
@@ -631,93 +686,6 @@
     });
 
 
-    var options = {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: false,
-      // events: true,
-      // animation: {
-      //   duration: 0,
-      //   onComplete: function () {
-      //     var self = this,
-      //       chartInstance = this.chart,
-      //       ctx = chartInstance.ctx;
-
-      //     ctx.font = '15px tahoma';
-      //     ctx.textAlign = "center";
-      //     ctx.fillStyle = "#ffffff";
-
-      //     Chart.helpers.each(self.data.datasets.forEach((dataset, datasetIndex) => {
-      //       var meta = self.getDatasetMeta(datasetIndex),
-      //         total = 0, //total values to compute fraction
-      //         labelxy = [],
-      //         offset = Math.PI / 2, //start sector from top
-      //         radius,
-      //         centerx,
-      //         centery,
-      //         lastend = 0; //prev arc's end line: starting with 0
-
-      //       for (var val of dataset.data) { total += val; }
-
-      //       Chart.helpers.each(meta.data.forEach((element, index) => {
-      //         radius = 0.9 * element._model.outerRadius - element._model.innerRadius;
-      //         centerx = element._model.x;
-      //         centery = element._model.y;
-      //         var thispart = dataset.data[index],
-      //           arcsector = Math.PI * (2 * thispart / total);
-      //         if (element.hasValue() && dataset.data[index] > 0) {
-      //           labelxy.push(lastend + arcsector / 2 + Math.PI + offset);
-      //         }
-      //         else {
-      //           labelxy.push(-1);
-      //         }
-      //         lastend += arcsector;
-      //       }), self)
-
-      //       var lradius = radius * 3 / 4;
-      //       for (var idx in labelxy) {
-      //         if (labelxy[idx] === -1) continue;
-      //         var langle = labelxy[idx],
-      //           dx = centerx + lradius * Math.cos(langle),
-      //           dy = centery + lradius * Math.sin(langle),
-      //           //val = Math.round(dataset.data[idx] / total * 100);
-      //           val = dataset.data[idx] + " กิจกรรม";
-      //         ctx.fillText(val, dx, dy);
-      //       }
-
-      //     }), self);
-      //   }
-      // },
-    };
-
-    // Pie chart
-    var ctx = document.getElementById("bed_pie");
-    var data = {
-      datasets: [{
-        data: [20, 15, 784, 678],
-        backgroundColor: [
-          "#FFC7D4",
-          "#C7E5FF",
-          "#0088FF",
-          "#FF003C"
-        ]
-      }],
-      labels: [
-        "เตียงว่างนิสิตหญิง",
-        "เตียงว่างนิสิตชาย",
-        "นิสิตชาย",
-        "นิสิตหญิง",
-      ]
-    };
-
-    var pieChart = new Chart(ctx, {
-      data: data,
-      type: 'pie',
-      options: options
-    });
-
-    document.getElementById("bed_pie_legend").innerHTML = pieChart.generateLegend();
-
     var mood_line_chart = document.getElementById("mood_line");
     var lineChart = new Chart(mood_line_chart, {
       type: 'line',
@@ -744,7 +712,67 @@
       }
     });
 
-    document.getElementById("mood_line_legend").innerHTML = lineChart.generateLegend();
+    //document.getElementById("mood_line_legend").innerHTML = lineChart.generateLegend();
+
+
+    var horizon_opt = {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      events: false,
+      tooltips: {
+        enabled: false
+      },
+      hover: {
+        animationDuration: 0
+      },
+      animation: {
+        duration: 500,
+        easing: "easeOutQuart",
+        onComplete: function () {
+          var ctx = this.chart.ctx;
+          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+          ctx.textAlign = 'right';
+          ctx.textBaseline = 'middle';
+
+          this.data.datasets.forEach(function (dataset) {
+            for (var i = 0; i < dataset.data.length; i++) {
+              var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+                scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.maxHeight;
+              ctx.fillStyle = '#000';
+              var x_pos = model.x + 20
+              // Make sure data value does not get overflown and hidden
+              // when the bar's value is too close to max value of scale
+              // Note: The y value is reverse, it counts from top down
+
+              if ((scale_max - model.x) / scale_max < -0.9) var x_pos = model.x - 20;
+              console.log((scale_max - model.x) / scale_max);
+              ctx.fillText(dataset.data[i], x_pos, model.y);
+            }
+          });
+        }
+      }
+    };
+
+    var bar_data = {
+      labels: ["มีปัญหากับเพื่อนร่วมห้อง", "เสียงดัง", "ความสะอาด", "กิจกรรม", "พัสดุหาย", "คะแนนกิจกรรม", "โรงอาหาร"],
+      datasets: [{
+        label: "จำนวนปัญหาที่ได้รับการ้องเรียน",
+        backgroundColor: "#FF003C",
+        data: [25, 20, 18, 16, 15, 10, 7]
+      }]
+    };
+
+    // Bar chart
+    var ctx = document.getElementById("top_problem");
+    var mybarChart = new Chart(ctx, {
+      responsive: true,
+      type: 'horizontalBar',
+      data: bar_data,
+      options: horizon_opt
+    });
+
+    //document.getElementById("topproblem_legend").innerHTML = mybarChart.generateLegend();
   </script>
 
 

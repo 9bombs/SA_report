@@ -16,13 +16,22 @@
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.css" rel="stylesheet">
+    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -49,6 +58,7 @@
                     <!-- /menu profile quick info -->
 
                     <br />
+
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
@@ -92,10 +102,19 @@
                                             <a href="scholarship.html">รายงานภาพรวม</a>
                                         </li>
                                         <li>
-                                            <a href="scholarship-form.html">นำเข้าข้อมูล</a>
+                                            <a href="scholarship-data.html">รายชื่อนิสิตทุน</a>
+                                        </li>
+                                        <li>
+                                            <a href="scholarship-new-form.html">เพิ่มนิสิตทุนใหม่</a>
+                                        </li>
+                                        <li>
+                                            <a href="scholarship-new-funding.html">เพิ่มทุนภายนอกใหม่</a>
                                         </li>
                                         <li>
                                             <a href="act-form.html">สร้างกิจกรรมใหม่</a>
+                                        </li>
+                                        <li>
+                                            <a href="scholarship-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -107,10 +126,10 @@
                                             <a href="residence.html">รายงานภาพรวม</a>
                                         </li>
                                         <li>
-                                            <a href="residence-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
+                                            <a href="act-form.html">สร้างกิจกรรมใหม่</a>
                                         </li>
                                         <li>
-                                            <a href="act-form.html">สร้างกิจกรรมใหม่</a>
+                                            <a href="residence-report-data.html">นำเข้าข้อมูลรายงานรายเดือน</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -194,18 +213,17 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>ข้อมูลผู้ใช้บริการ</h3>
                         </div>
 
                         <div class="title_right">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                            <!--<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search for...">
                                     <span class="input-group-btn">
                       <button class="btn btn-default" type="button">Go!</button>
                     </span>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
 
@@ -243,11 +261,40 @@
                                         <h3>นายณัฐพล เจริญชัย</h3>
 
                                         <ul class="list-unstyled user_data">
-                                            <li>นิสิตคณะวิศวกรรมศาสตร์</li>
-                                            <li>ชั้นปีที่ 3</li>
+                                            <li>
+                                                <h4>นิสิตคณะวิศวกรรมศาสตร์</h4>
+                                            </li>
+                                            <li>
+                                                <h4>ชั้นปีที่ 3</h4>
+                                            </li>
                                         </ul>
 
                                         <div class="ln_solid"></div>
+
+                                        <h4><strong>หมายเลขติดต่อฉุกเฉิน</strong></h4>
+                                        <ul class="list-unstyled user_data">
+                                            <li>
+                                                <p>มารดา นางรชวรรณ เจริญชัย</p>
+                                            </li>
+                                            <li>
+                                                <p>โทร. 0985597452</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="ln_solid"></div>
+
+                                         <h4><strong>หมายเลขติดต่อ Advisor</strong></h4>
+                                        <ul class="list-unstyled user_data">
+                                            <li>
+                                                <p>อ.นพ.สมรักษ์ สันติเบ็ญจกุล</p>
+                                            </li>
+                                            <li>
+                                                <p>โทร. 02-2564298</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="ln_solid"></div>
+
 
                                         <h4>สาเหตุที่เข้าใช้บริการ</h4>
                                         <!-- start of user-activity-graph -->
@@ -280,10 +327,11 @@
 
                                                             <div class="message_date">
                                                                 <h3 class="date text-info">24</h3>
-                                                                <p class="month">May</p>
+                                                                <p class="month">ธ.ค.</p>
+                                                                <p class="year">2559</p>
                                                             </div>
                                                             <div class="message_wrapper">
-                                                                <h4 class="heading">อ.นพ.สมรักษ์</h4>
+                                                                <h4 class="heading">ปัญหานำ: วิตกกังวล</h4>
                                                                 <blockquote class="message">ป๋าเที่ยงคืนขั้นตอน ภารตะ เอ็นจีโอธัมโม เนิร์สเซอรี่คาราโอเกะพรีเมียม
                                                                     ดอกเตอร์โยโย่ สติ๊กเกอร์ไงช็อปเยอบีร่า นพมาศติงต๊อง ช็อค
                                                                     ร็อค อัตลักษณ์โหลยโท่ยตาปรือ ซิงตรวจสอบทาวน์คอรัปชั่น
@@ -296,10 +344,11 @@
 
                                                             <div class="message_date">
                                                                 <h3 class="date text-error">21</h3>
-                                                                <p class="month">May</p>
+                                                                <p class="month">พ.ค.</p>
+                                                                <p class="year">2559</p>
                                                             </div>
                                                             <div class="message_wrapper">
-                                                                <h4 class="heading">อ.นพ.สมรักษ์</h4>
+                                                                <h4 class="heading">ปัญหานำ: วิตกกังวล</h4>
                                                                 <blockquote class="message">ป๋าเที่ยงคืนขั้นตอน ภารตะ เอ็นจีโอธัมโม เนิร์สเซอรี่คาราโอเกะพรีเมียม
                                                                     ดอกเตอร์โยโย่ สติ๊กเกอร์ไงช็อปเยอบีร่า นพมาศติงต๊อง ช็อค
                                                                     ร็อค อัตลักษณ์โหลยโท่ยตาปรือ ซิงตรวจสอบทาวน์คอรัปชั่น
@@ -312,10 +361,11 @@
 
                                                             <div class="message_date">
                                                                 <h3 class="date text-info">24</h3>
-                                                                <p class="month">May</p>
+                                                                <p class="month">มี.ค.</p>
+                                                                <p class="year">2559</p>
                                                             </div>
                                                             <div class="message_wrapper">
-                                                                <h4 class="heading">อ.นพ.สมรักษ์</h4>
+                                                                <h4 class="heading">ปัญหานำ: วิตกกังวล</h4>
                                                                 <blockquote class="message">โคโยตีทอมรีไทร์เยนวานิลลา ยอมรับไฮไลต์ตรวจทานติวเดบิต แทคติคดิกชันนารีไฮเอนด์ยาวีไฮเวย์
                                                                     พ่อค้า คาเฟ่ รีสอร์ท ซิมโฟนี่คอลัมน์พุดดิ้งดยุก แคนูอุด้งซัพพลายเออร์ซิมโฟนี
                                                                     ตาปรือตรวจทาน ทริปตอกย้ำปัจเจกชน แอดมิชชั่นมยุราภิรมย์โปรเจกต์
@@ -328,10 +378,11 @@
 
                                                             <div class="message_date">
                                                                 <h3 class="date text-info">24</h3>
-                                                                <p class="month">May</p>
+                                                                <p class="month">ก.พ.</p>
+                                                                <p class="year">2559</p>
                                                             </div>
                                                             <div class="message_wrapper">
-                                                                <h4 class="heading">อ.นพ.สมรักษ์</h4>
+                                                                <h4 class="heading">ปัญหานำ: ซึมเศร้า</h4>
                                                                 <blockquote class="message">โคโยตีทอมรีไทร์เยนวานิลลา ยอมรับไฮไลต์ตรวจทานติวเดบิต แทคติคดิกชันนารีไฮเอนด์ยาวีไฮเวย์
                                                                     พ่อค้า คาเฟ่ รีสอร์ท ซิมโฟนี่คอลัมน์พุดดิ้งดยุก แคนูอุด้งซัพพลายเออร์ซิมโฟนี
                                                                     ตาปรือตรวจทาน ทริปตอกย้ำปัจเจกชน แอดมิชชั่นมยุราภิรมย์โปรเจกต์
@@ -344,10 +395,11 @@
 
                                                             <div class="message_date">
                                                                 <h3 class="date text-info">24</h3>
-                                                                <p class="month">May</p>
+                                                                <p class="month">ม.ค.</p>
+                                                                <p class="year">2559</p>
                                                             </div>
                                                             <div class="message_wrapper">
-                                                                <h4 class="heading">อ.นพ.สมรักษ์</h4>
+                                                                <h4 class="heading">ปัญหานำ: ซึมเศร้า</h4>
                                                                 <blockquote class="message">โคโยตีทอมรีไทร์เยนวานิลลา ยอมรับไฮไลต์ตรวจทานติวเดบิต แทคติคดิกชันนารีไฮเอนด์ยาวีไฮเวย์
                                                                     พ่อค้า คาเฟ่ รีสอร์ท ซิมโฟนี่คอลัมน์พุดดิ้งดยุก แคนูอุด้งซัพพลายเออร์ซิมโฟนี
                                                                     ตาปรือตรวจทาน ทริปตอกย้ำปัจเจกชน แอดมิชชั่นมยุราภิรมย์โปรเจกต์
@@ -548,7 +600,10 @@
     <script src="build/js/custom.min.js"></script>
 
     <script>
+
+
         $(function () {
+
             var horizon_opt = {
                 responsive: true,
                 maintainAspectRatio: false,
@@ -564,11 +619,11 @@
 
 
             var bar_data = {
-                labels: ["การปรับตัว", "วิตกกังวล", " ซึมเศร้า"],
+                labels: ["วิตกกังวล", " ซึมเศร้า"],
                 datasets: [{
                     label: "เพศชาย",
                     backgroundColor: "#88C100",
-                    data: [5, 3, 2]
+                    data: [3, 2]
                 }]
             };
 
